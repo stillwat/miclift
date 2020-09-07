@@ -1,0 +1,726 @@
+
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color:#CDCDCD;
+}
+
+.parent {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: auto;
+}
+
+.block {
+    width: 1150px;
+    height: 440px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+}
+.greyBut{
+    background-color: transparent;
+    background-image: url(/img/greyButNA.png);
+    background-repeat: no-repeat;
+    height: 32px;
+    width: 79px;
+    margin-right: 38px;
+    position: relative;
+    bottom: 0px;
+    float: left;
+    background-size:cover;
+}
+.entButtonBig{
+    background-image: url(/img/enterBut.png);
+    background-size: cover;
+    height: 158px;
+    width: 245px;
+    position: absolute;
+    right: 20px;
+    top: 220px;
+}
+.entButtonBig:hover{
+    background-image: url(/img/enterButA.png);
+}
+.escButtonBig{
+    background-image: url(/img/escButA.png);
+    width: 100px;
+    height: 41px;
+    position: absolute;
+    right: 111px;
+    top: 65px;
+    background-size: cover;
+}
+.escButtonBig:hover{
+    background-image: url(/img/escButNA.png);
+}
+.greyBut:hover{
+    background-image: url(/img/greyButA.png);
+}
+.greyButLine{
+    padding-left: 18px;
+    position: absolute;
+    bottom: 0px;
+    left: 150px;
+}
+.wrapPult{
+    width: 700px;
+    height: 100%;
+    float: left;
+}
+
+
+.upLineButtons{
+    color:white;
+    text-align: center;
+}
+.buttonsFour{
+    background-color: #606060;
+    color:white;
+    padding: 7px 0px 3px 0px;
+    border-radius: 25px 25px 0px 0px;
+    text-align: left;
+    padding-left: 20px;
+    font-family: sans-serif;
+    font-weight: bold;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+    margin-right:5px;
+}
+
+.buttonsFour.activePanel{
+background-color: #33D8ED;
+color:black;
+}
+
+.upLineButtons>.row{margin:0px;}
+.stickWrap{
+    float: left;
+    width: 150px;
+    height: 100%;
+}
+.stick {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    top: 0;
+    left: 0;
+    overflow: auto;
+}
+
+.joist {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    background-image: url(/img/joist.png);
+    background-size: contain;
+    
+}
+.upBut{position: relative;
+    width: 33px;
+    height: 33px;
+    left: 33px;
+    cursor: pointer;}
+.leftBut{    position: relative;
+    width: 34px;
+    height: 34px;
+    top: 0px;
+    cursor: pointer;}
+.downBut{position: relative;
+    width: 33px;
+    height: 33px;
+    left: 34px;
+    bottom: 0px;
+    cursor: pointer;}
+.rightBut{
+    position: relative;
+    width: 33px;
+    height: 34px;
+    left: 67px;
+    bottom: 67px;
+    cursor: pointer;
+}
+.centerBut{
+    position: relative;
+    width: 33px;
+    height: 34px;
+    left: 34px;
+    bottom: 101px;
+    cursor: pointer;
+}
+.downLineButtons>.row{margin:0px;}
+.joist.activeCenter{
+    background-image: url(/img/holdCenter.png);
+}
+.joist.activeUp{
+    background-image: url(/img/holdUp.png);
+}
+.joist.clickUp{
+    background-image: url(/img/clickUp.png);
+}
+.joist.activeLeft{
+    background-image: url(/img/holdLeft.png);
+}
+.joist.clickLeft{
+    background-image: url(/img/clickLeft.png);
+}
+.joist.activeDown{
+    background-image: url(/img/holdDown.png);
+}
+.joist.clickCenter{
+    background-image: url(/img/clickCenter.png);
+}
+.joist.clickDown{
+    background-image: url(/img/clickDown.png);
+}
+.joist.activeRight{
+    background-image: url(/img/holdRight.png);
+}
+.joist.clickRight{
+    background-image: url(/img/clickRight.png);
+}
+.listDiv{    width: 350px;
+    height: 305px;
+    padding: 0px;
+    background-color: black;
+    margin: 0px;
+    overflow: hidden;
+    border: 4px solid grey;
+
+}
+.listDiv::-webkit-scrollbar-button{
+    background-image:url('');
+    background-repeat:no-repeat;
+    width:15px;
+    height:0px;
+    position:relative;
+    left:20px;
+}
+.listDiv::-webkit-scrollbar-track{
+    background-color:#ecedee
+}
+.listDiv::-webkit-scrollbar-thumb{
+    -webkit-border-radius: 0px;
+    border-radius: 0px;
+    background-color:#33D8ED;
+}
+.listDiv::-webkit-scrollbar-thumb:hover{
+    background-color:#33D8ED;
+}
+.listDiv::-webkit-resizer{
+    background-image:url('');
+    background-repeat:no-repeat;
+    width:14px;
+}
+.listDiv::-webkit-scrollbar{
+    width: 14px;
+}
+.someNumbers{    
+    color: #33d8ed;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+}
+.txtLeft{text-align: left;padding-left: 3px !important;}
+.lineTxt{color: white;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 13px;
+    text-align: center;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+.itemList {
+        border: 2px solid grey;
+        padding: 0px;
+}
+.listDiv>.lineTxt:first-child{border-top:0px solid grey !important;}
+.listDiv>.lineTxt.activeHold{
+    background-color: #33D8ED !important;
+    color:black !important;
+}
+.activeHold{
+    background-color: #33D8ED !important;
+    color:black !important;
+}
+.numMM1{
+    display: block;
+    letter-spacing: -2px;
+    padding: 0px;
+    width: 49px !important;
+}
+.numSep2{
+        float: left;
+        margin: 0px;
+        padding: 0px;
+        width: 6% !important;
+}
+.memoryActiv{background-color: #33D8ED !important;}
+
+.numbersLeb>.activeMM{
+        letter-spacing: 0px;
+        width: 12% !important;
+        flex: 0 0 3% !important;
+        margin: 0px;
+        padding: 0px;
+        width: 14% !important;
+}
+.mmNum{display:none;}
+.active>.greyItem{color:black !important;}
+.active>.markList, .active>.markList2, .active>.markList3, .active>.markList4{color:white !important;}
+.activeFreeze{
+    background-color: rgb(51, 216, 237) !important;
+    color: black !important;
+}
+/*.lineTxt>.greyItem{color:grey;}*/
+.holded{background-color: rgb(51, 216, 237) !important;
+    color: black !important;}
+.greyItem{color:grey}
+.markList{background-color: #63D07B;color:white;}
+.markList2{background-color: #9F22DA;color:white;}
+.markList3{background-color: #41B4C3;color:white;}
+.markList4{background-color: #2F5AF4;color:white;}
+.listDiv>.row{margin:0px;}
+.downLineButtons{width: 100%;}
+.rightPanel{margin-left: 7px;
+    max-width: 147px;
+    flex: 0 0 29%;}
+.middleLine{height: 300px;width:690px;background-color:#606060;position:relative;}
+.settingBack{
+    background-image: url(/img/settingA.svg) !important;
+}
+.settingsDiv{
+    width: 36px;
+    height: 35px;
+    position: absolute;
+    right: 3px;
+    z-index: 99;
+    border: 2px solid #696969;
+    top: 1px;
+    background-image: url(/img/settingNA.svg);
+    background-size: cover;
+}
+.middleLine>.row{margin:0px;height: 300px;}
+.downButs{text-align: center;
+    font-size: 18px;
+    padding: 3px;
+    font-family: Roboto;
+    font-weight: bold;
+    background-color: black;
+    color: white;
+    border: 5px solid grey;    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;}
+.downLineButtons{height:40px;}
+.emptyBut{
+text-align: center;
+    padding: 3px;
+    font-family: sans-serif;
+    font-weight: bold;
+    background-color: black;
+    color: white;
+    border: 5px solid grey;    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+.downButs:hover{
+    background-color: #33D8ED;
+    color:black;
+}
+.upItemRightPanel{
+    width: 100%;
+    height: 100px;    
+    border: 3px solid #606060;
+}
+
+.wrapFour{
+    width: 525px;
+    height:33px;
+    overflow: hidden;
+ 
+    white-space:nowrap;
+}
+.upItemRightPanel>.row{margin:0px;}
+.memoryItem {
+    border: 2px solid #606060;
+    height: 32px;
+    padding: 0px;
+    margin: 0px;
+}
+.wrapFour::-webkit-scrollbar{
+    width: 0px;
+}
+.someNumbers, .nameItemRightPanel{    
+    width: 100%;
+    height: 33px;
+    border: 2px solid #606060;
+}
+
+.nameItemRightPanel{
+    color: white;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+}
+.downNumbersRightPanel>.row{
+    margin:0px;
+    height: 48px;
+}
+.downNumbersRightPanel>.row>div{
+    padding:0px;
+    text-align: center;
+    padding-left: 6px;
+}
+.itemActiveNumberNow{
+    background-color: #33d8ed;
+    color: black
+}
+.downNumbersRightPanel.activeMMNum{
+    font-size: 28px !important;
+}
+#rightPanelBT1.activeHold{
+    background-image: url('/img/3DA.png') !important;
+}
+#rightPanelBT2.activeHold{
+    background-image: url('/img/settingA.png') !important;
+}
+.numSep{
+    display: none;
+    padding-left: 0px !important;
+    margin-left: -7px;
+    margin-right: 7px;
+    width: 0px !important;
+}
+.numSep.activeMMSep{
+    display: block;
+    margin-left: 3px !important;
+    margin-right: 1px !important;
+}
+.upNumbersRightPanel{
+    color: white;
+    text-align: center;
+    font-weight: 600;
+    font-size: 23px;
+    padding: 0px;
+    height: 36px;
+}
+.downNumbersRightPanel{
+    color: white;
+    font-size: 40px;
+    text-align: center;
+    font-weight: 700;
+    letter-spacing: 6px;
+    padding: 0px;
+    line-height: 42px;
+    height: 48px;
+}
+.downItemRightPanel>.row{margin:0px;}
+.downItemRightPanel{border-top: 5px solid #606060;}
+.buttonsFour{
+   /* width:135px;
+    float: left;
+    display: inline;*/
+    display: inline-block;
+    vertical-align: top;
+    width: 123px;
+    height:33px;
+}
+
+.wrapThree{
+    position: absolute;
+    width: 165px;
+    height: 33px;
+    right: 310px;
+ 
+}
+.butRightSide{
+    width: 54px;
+    float: left;
+    padding: 5px;
+    text-align: center;
+}
+.upLineButtons>.row>.row{margin:0px;}
+.leftItemButRightSide{
+    background-image: url(/img/rightArr.png);
+    height: 31px;
+    padding: 15px;
+    background-size: 10px;
+    background-position: center;
+    width: 55px;
+    background-repeat: no-repeat;
+    background-color: black;
+    margin-top: 0px;
+    border-top: 2px solid #606060;
+    border-bottom: 2px solid #606060;
+
+}
+.holdOff{
+    background-color:black !important;
+    color:#696969 !important;
+}
+.centerItemButRightSide{background-image: url(/img/3DNA.png);
+    height: 31px;
+    padding: 15px;
+    background-size: 30px;
+    background-position: center;
+    width: 55px;
+    background-repeat: no-repeat;
+    border: 2px solid #606060;
+    background-color: black;}
+.rightItemButRightSide{background-image: url(/img/settingNA.png);
+    height: 31px;
+    padding: 15px;
+    background-size: 30px;
+    background-position: center;
+    width: 55px;
+    background-repeat: no-repeat;
+    border: 2px solid #606060;
+    background-color: black;}
+
+.outside {
+    width: 528px;
+    height: 100%;
+    padding-right: 0px;
+    overflow-x: hidden;
+    overflow-y: scroll; 
+}
+ 
+.inside {
+    width: 100%;
+    margin: 0 0px;
+    padding-right: 17px;
+
+}
+
+.wrapFourIn{
+    overflow-x: scroll;
+}
+
+.panelNumbersRightPanel{border: 3px solid #606060;
+    height: 90px;}
+
+.rightButtonRightPanel{    
+    height: 35px;
+    text-align: center;
+    color: white;
+    background-color: green;
+    border: 3px solid grey;
+    font-size: 19px;
+    font-weight: bold;
+    line-height: 24px;
+}
+
+.lineTxt {
+    pointer-events: none;
+  }
+
+.stopClick{
+    pointer-events: none;
+}
+
+
+.lessCircles>.row{
+    margin:0px;
+}
+
+.txtWrap{
+    color:white;
+    text-align: center;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.menuDiv{
+    height:160px;
+    width: 100%;
+    border: 3px solid grey;
+}
+
+.txtWrapW{
+    height: 65px;
+}
+
+.imgMenu{
+    height: 100px;
+    width: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.imgMenu1{
+    background-image: url(/img/settings1NA.png);
+}
+.imgMenu2{
+    background-image: url(/img/settings2NA.png);
+}
+.imgMenu3{
+    background-image: url(/img/settings3NA.png);
+}
+.imgMenu4{
+    background-image: url(/img/settings4NA.png);
+}
+.imgMenu5{
+    background-image: url(/img/settings5NA.png);
+}
+.imgMenu6{
+    background-image: url(/img/settings6NA.png);
+}
+
+.textCss{
+    line-height: 20px;;
+}
+
+.imgMenu1A{
+    background-image: url(/img/settings1A.png);
+}
+.imgMenu2A{
+    background-image: url(/img/settings2A.png);
+}
+.imgMenu3A{
+    background-image: url(/img/settings3A.png);
+}
+.imgMenu4A{
+    background-image: url(/img/settings4A.png);
+}
+.imgMenu5A{
+    background-image: url(/img/settings5A.png);
+}
+.imgMenu6A{
+    background-image: url(/img/settings6A.png);
+}
+
+
+
+.activeFreeze1{
+    background-color: rgb(51, 216, 237) !important;
+    color: black !important;
+}
+.activeFreeze2{
+    background-color: rgb(51, 216, 237) !important;
+    color: black !important;
+}
+.activeFreeze3{
+    background-color: rgb(51, 216, 237) !important;
+    color: black !important;
+}
+.activeFreeze4{
+    background-color: rgb(51, 216, 237) !important;
+    color: black !important;
+}
+.activeFreeze5{
+    background-color: rgb(51, 216, 237) !important;
+    color: black !important;
+}
+.activeFreeze6{
+    background-color: rgb(51, 216, 237) !important;
+    color: black !important;
+}
+
+.wrapMenu{
+    width: 749px;
+    height: 177px;
+    overflow: hidden;
+    text-align: center;
+}
+.lessCircles{
+    margin: 60px 85px;
+    overflow: hidden;
+    width: 511px;
+    max-width: 500px;
+}
+.itemInMenu{
+    width: 100%;
+    height: 100%;
+    color: white;
+    padding: 60px 20px;
+    font-weight: 600;
+    font-size: 16px;
+    font-family: Roboto;
+}
+
+#itemMen1{
+    border: 5px solid #33D8ED;
+}
+#itemMen2{
+    border: 5px solid #63D07B;
+}
+#itemMen3{
+    border: 5px solid #F4C92F;
+}
+#itemMen4{
+    border: 5px solid #2F5AF4;
+}
+#itemMen5{
+    border: 5px solid rgb(99, 43, 231);
+}
+#itemMen6{
+    border: 5px solid #FF59E5;
+}
+.middleRow{
+    margin-top: -75px !important;
+}
+
+.leftArNA{
+    background-image: url(/img/leftArrChoiseNA.png);
+}
+.leftArA{
+    background-image: url(/img/leftArrChoiseA.png);
+}
+.rightArA{
+    background-image: url(/img/rightArrChoiseA.png);
+}
+.rightArNA{
+    background-image: url(/img/rightArrChoiseNA.png);
+}
+.leftArr{
+    z-index: 99999;
+    width: 20px;
+    height: 36px;
+    position: relative;
+    right: -34px;
+    top: 131px;
+    background-size: cover;
+}
+
+.rightArr{
+    z-index: 99999;
+    width: 20px;
+    height: 36px;
+
+    position: relative;
+    left: 627px;
+    top: 95px;
+    background-size: cover;
+}
+
+.butActive{
+    background-color: #33D8ED;
+    color: black;
+}

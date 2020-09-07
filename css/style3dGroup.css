@@ -1,0 +1,981 @@
+
+
+/* джойстик */
+
+.rotateJoist{
+    width: 150px;
+    height: 125px;
+    position: relative;
+    top: 125px;
+
+}
+
+.leftArRot{
+    margin-right:7px;
+    width: 35px;
+    height: 100px;
+    float:left;
+    background-image: url(../img/leftBJ.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.leftArRot:hover{
+    background-image: url(../img/leftBJNA.png);
+}
+
+.activeMainJ{
+    background-image: url(../img/mainJA.png) !important;
+}
+
+.mainJRot{
+    padding: 11px;
+    width: 64px;
+    height: 64px;
+    margin-top: 5px;
+    float: left;
+    background-image: url(../img/mainJ.png);
+    background-size: contain;
+}
+
+.mainJRot:hover{
+    background-image: url(../img/mainJNA.png);
+}
+
+.rightArRot{
+    margin-left:7px;
+    width: 35px;
+    height: 80px;
+    float:left;
+    background-image: url(../img/rightBJ.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.rightArRot:hover{
+    background-image: url(../img/rightBJNA.png);
+}
+
+
+
+
+
+
+.delMainWrap{
+    overflow: hidden !important;
+}
+.butDel{
+    height: 42px;
+    border: 5px solid #696969;
+    color: white;
+    font-size: 18px;
+    text-align: center;
+    line-height: 32px;
+    font-weight: 500;
+    font-family: Roboto;
+}
+.groupMark{
+    display:none;
+    background-color:#9F22DA;
+    color:white;
+}
+.groupMark2{
+    display:none;
+    background-color:#be5800;
+    color:white;
+}
+.groupMark3{
+    display:none;
+    background-color:#75be00;
+    color:white;
+}
+.groupMark4{
+    display:none;
+    background-color:#00beac;
+    color:white;
+}
+.groupMark5{
+    display:none;
+    background-color:#5538f1;
+    color:white;
+}
+
+.backGroupMark{
+    display:none;
+    background-color:#2F5AF4; 
+}
+.parkMark{
+    display:none;
+    background-color:#63D07B;
+    color:white;
+}
+.backParkMark{
+    display:none;
+    background-color:#63D07B; 
+}
+.freezeMark{
+    display:none;
+    background-color:#41B4C3;
+    color:white;
+}
+.backFreezeMark{
+    display:none;
+    background-color:#41B4C3; 
+}
+
+.wrapButtonsDelete{
+    margin: 0px;
+    top: -2px;
+    position: relative;
+}
+.deleteWrap{
+    display:none;
+    width: 690px;
+    height: 375px;
+    position: absolute;
+    background-color: black;
+    z-index: 999;
+}
+.inDeleteWrap{
+    width: 690px !important;
+    height: 375px !important;
+}
+.downPanelDelete{
+    position: absolute;
+    bottom: 0px;
+    height: 40px;
+    width: 100%;
+}
+.midDiv{
+    width: 570px !important;
+    height: 235px !important;
+    margin-bottom: 90px !important;
+    border:2px solid #FF6853 !important;
+}
+.midDiv>.row{
+    margin:0px;
+}
+.titleDelete{
+    width: 100%;
+    height: 35px;
+    background-color: FF6853;
+    color:white;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: Roboto;
+    line-height: 34px;
+}
+.titleObjectDelete{
+    color: white;
+    padding: 28px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+}
+.messageDelete{
+    font-size: 16px;
+    color: white;
+    font-family: Roboto;
+    padding: 21px 65px;
+    text-align: center;
+    width: 94px;
+    font-weight: 500;
+    line-height: 20px;
+}
+
+
+
+
+
+
+
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color:#CDCDCD;
+}
+
+.parent {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: auto;
+}
+
+.block {
+    width: 1150px;
+    height: 440px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+}
+.greyBut{
+    background-color: transparent;
+    background-image: url(/img/greyButNA.png);
+    background-repeat: no-repeat;
+    height: 32px;
+    width: 78px;
+    margin-right: 38px;
+    position: relative;
+    bottom: 0px;
+    float: left;
+    background-size:contain;
+}
+.entButtonBig{
+    background-image: url(/img/enterBut.png);
+    background-size: cover;
+    height: 158px;
+    width: 245px;
+    position: absolute;
+    right: 20px;
+    top: 220px;
+}
+.entButtonBig:hover{
+    background-image: url(/img/enterButA.png);
+}
+.escButtonBig{
+    background-image: url(/img/escButA.png);
+    width: 100px;
+    height: 41px;
+    position: absolute;
+    right: 111px;
+    top: 65px;
+    background-size: cover;
+}
+.escButtonBig:hover{
+    background-image: url(/img/escButNA.png);
+}
+.greyBut:hover{
+    background-image: url(/img/greyButA.png);
+}
+.greyButLine{
+    padding-left: 18px;
+    position: absolute;
+    bottom: 0px;
+    left: 150px;
+}
+.wrapPult{
+    width: 700px;
+    height: 100%;
+    float: left;
+}
+
+
+.upLineButtons{
+    color:white;
+    text-align: center;
+}
+.buttonsFour{
+    font-size:16px;
+    background-color: #606060;
+    color:white;
+    padding: 7px 0px 3px 0px;
+    border-radius: 25px 25px 0px 0px;
+    text-align: left;
+    padding-left: 20px;
+    font-family: sans-serif;
+    font-weight: bold;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+    margin-right:5px;
+}
+
+.buttonsFour.activePanel{
+background-color: #33D8ED;
+color:black;
+}
+
+.upLineButtons>.row{margin:0px;}
+.stickWrap{
+    float: left;
+    width: 160px;
+    height: 100%;
+}
+.stick {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    top: 0;
+    left: 0;
+    overflow: auto;
+}
+
+.joist {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    /*
+    top: 0;
+    right: 0;
+    */
+    right: -760px;
+    top: -65px;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    background-image: url(/img/joist.png);
+    background-size: contain;
+    
+}
+.upBut{position: relative;
+    width: 33px;
+    height: 33px;
+    left: 33px;
+    cursor: pointer;}
+.leftBut{    position: relative;
+    width: 34px;
+    height: 34px;
+    top: 0px;
+    cursor: pointer;}
+.downBut{position: relative;
+    width: 33px;
+    height: 33px;
+    left: 34px;
+    bottom: 0px;
+    cursor: pointer;}
+.rightBut{
+    position: relative;
+    width: 33px;
+    height: 34px;
+    left: 67px;
+    bottom: 67px;
+    cursor: pointer;
+}
+.centerBut{
+    position: relative;
+    width: 33px;
+    height: 34px;
+    left: 34px;
+    bottom: 101px;
+    cursor: pointer;
+}
+.downLineButtons>.row{margin:0px;}
+.joist.activeCenter{
+    background-image: url(/img/holdCenter.png);
+}
+.joist.activeUp{
+    background-image: url(/img/holdUp.png);
+}
+.joist.clickUp{
+    background-image: url(/img/clickUp.png);
+}
+.joist.activeLeft{
+    background-image: url(/img/holdLeft.png);
+}
+.joist.clickLeft{
+    background-image: url(/img/clickLeft.png);
+}
+.joist.activeDown{
+    background-image: url(/img/holdDown.png);
+}
+.joist.clickCenter{
+    background-image: url(/img/clickCenter.png);
+}
+.joist.clickDown{
+    background-image: url(/img/clickDown.png);
+}
+.joist.activeRight{
+    background-image: url(/img/holdRight.png);
+}
+.joist.clickRight{
+    background-image: url(/img/clickRight.png);
+}
+.wrapGroup{
+    height: 180px;
+    overflow-y: auto;
+}
+.butDownR{
+    height: 22px !important;
+}
+.groupDiv{
+    background-color: transparent;
+    color:white;
+    text-align: center;
+    height: 35px;
+    flex: 0 0 94%;
+    line-height: 34px;
+    font-weight: 500;
+    font-family: Roboto;
+}
+.wrapDownPanelRight{
+    border-top: 5px solid #696969;
+    height: 115px;
+}
+.updownArDiv{
+    display:none;
+}
+
+.leftAr3d{
+    background-image: url(/img/leftArG.png);
+    width: 24px;
+    height: 52px;
+    padding: 13px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin: 30px 17px;
+}
+.upAr3d{
+    width: 77px;
+    height: 28px;
+    background-image: url(/img/arrUp.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin: -7px 30px;
+}
+.downAr3d{
+    width: 77px;
+    height: 28px;
+    background-image: url(/img/arrDown.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin: 13px 30px;
+}
+.rightAr3d{
+    background-image: url(/img/rightArG.png);
+    width: 24px;
+    height: 52px;
+    padding: 13px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin: 30px 17px;
+}
+
+
+
+.upArDiv{
+    border-bottom: 5px solid #696969;
+    height: 41px;
+}
+.listDiv{width: 350px;
+    height: 300px;
+    padding: 0px;
+    background-color: black; 
+    overflow: auto;
+    margin: 0px 5px 5px 0px;
+}
+
+.wrapGroup::-webkit-scrollbar-button{
+    background-image:url('');
+    background-repeat:no-repeat;
+    width:15px;
+    height:0px;
+    position:relative;
+    left:20px;
+}
+.wrapGroup::-webkit-scrollbar-track{
+    background-color:#ecedee
+}
+.wrapGroup::-webkit-scrollbar-thumb{
+    -webkit-border-radius: 0px;
+    border-radius: 0px;
+    background-color:#33D8ED;
+}
+.wrapGroup::-webkit-scrollbar-thumb:hover{
+    background-color:#33D8ED;
+}
+.wrapGroup::-webkit-resizer{
+    background-image:url('');
+    background-repeat:no-repeat;
+    width:14px;
+}
+.wrapGroup::-webkit-scrollbar{
+    width: 7px;
+}
+
+
+
+.listDiv::-webkit-scrollbar-button{
+    background-image:url('');
+    background-repeat:no-repeat;
+    width:15px;
+    height:0px;
+    position:relative;
+    left:20px;
+}
+.listDiv::-webkit-scrollbar-track{
+    background-color:#ecedee
+}
+.listDiv::-webkit-scrollbar-thumb{
+    -webkit-border-radius: 0px;
+    border-radius: 0px;
+    background-color:#33D8ED;
+}
+.listDiv::-webkit-scrollbar-thumb:hover{
+    background-color:#33D8ED;
+}
+.listDiv::-webkit-resizer{
+    background-image:url('');
+    background-repeat:no-repeat;
+    width:14px;
+}
+.listDiv::-webkit-scrollbar{
+    width: 7px;
+}
+.someNumbers{    
+    color: #33d8ed;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+}
+.txtLeft{text-align: left;padding-left: 3px !important;}
+.lineTxt{color: white;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 15px;
+    text-align: center;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+.itemList {
+    border-top:1px  solid #696969;
+    border-right: 2px solid #696969;
+    border-left: 2px solid #696969;
+    border-bottom:1px  solid #696969;
+    padding: 0px;
+    border-right: 0px;
+}
+.listDiv>.lineTxt:first-child{border-top:0px solid #696969 !important;}
+.listDiv>.lineTxt.activeHold{
+    background-color: #33D8ED !important;
+    color:black !important;
+}
+.activeHold{
+    background-color: #33D8ED !important;
+    color:black !important;
+}
+.numMM1{
+    display: block;
+    letter-spacing: -2px;
+    padding: 0px;
+    width: 49px !important;
+}
+.numSep2{
+        float: left;
+        margin: 0px;
+        padding: 0px;
+        width: 6% !important;
+}
+.memoryActiv{background-color: #33D8ED !important;}
+
+.numbersLeb>.activeMM{
+        letter-spacing: 0px;
+        width: 12% !important;
+        flex: 0 0 3% !important;
+        margin: 0px;
+        padding: 0px;
+        width: 14% !important;
+}
+.mmNum{display:none;}
+.active>.greyItem{color:black !important;}
+.active>.markList, .active>.markList2, .active>.markList3, .active>.markList4{color:white !important;}
+.activeFreeze{
+    background-color: rgb(51, 216, 237) !important;
+    color: black !important;
+}
+/*.lineTxt>.greyItem{color:grey;}*/
+.holded{background-color: rgb(51, 216, 237) !important;
+    color: black !important;}
+.greyItem{color:grey}
+.markList{background-color: #63D07B;color:white;}
+.markList2{background-color: #9F22DA;color:white;}
+.markList3{background-color: #41B4C3;color:white;}
+.markList4{background-color: #2F5AF4;color:white;}
+.markList5{background-color: #ff6a06;color:white;}
+.listDiv>.row{margin:0px;}
+.downLineButtons{width: 100%;}
+.wrapDownPanelRight>div{
+    margin:-1px;
+    padding:0px;
+}
+.fDivDownPanel{
+    border-right: 6px solid #696969;
+}
+.fRow{
+    font-size: 18px;
+    font-family: Roboto;
+    color: #ADADAD;
+    height: 26px;
+    line-height: 30px;
+}
+.sRow{
+    font-size: 28px;
+    font-family: Roboto;
+    color: white;
+    font-weight: 600;
+    height: 35px;
+    line-height: 36px;
+    position: relative;
+    left:-5px;
+    
+}
+.panelRightDownButtons{
+    padding:0px;
+}
+.b1{
+    background-color:#2F5AF4;
+    margin-top:1px;
+}
+.b2{
+    background-color:#63D07B;
+}
+.b3{
+    background-color:#41B4C3;
+}
+.butCssDown{
+    height: 21px;
+    line-height: 18px;
+    text-align: center;
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+}
+.fDivDownPanel>.row{margin:0px;}
+.fDivDownPanel>.row>div{text-align:center;}
+.tDivDownPanel{
+    border-left: 6px solid #696969;
+    /*width: 309px;
+    flex: 0 0 27%;
+    max-width: 300px;*/
+}
+
+.tDivDownPanel>.row{
+    margin:0px;
+}
+.rightPanel{
+    margin-top: 1px;
+    margin-left: 0px;
+    height: 310px;
+    overflow: hidden;
+    max-width: 100%;
+    width: 315px;
+    flex: 1 0 40%;
+    border-top: 4px solid #696969;
+}
+.butActive{
+    background-color: rgb(51, 216, 237) !important;
+    color: black !important;
+}
+.activeHold>.groupDiv{
+    color:black !important;
+}
+.groupDivRightPanel{
+    margin: 2px -7px 7px -7px;
+    background-color: #696969;
+}
+.choiseGroup{
+    outline: 2px solid #33D8ED;
+    line-height: 28px;
+    color: #40b4c3;
+}
+.choiseGroup>div{
+    color: #33D8ED;
+}
+.arrowDiv{
+    opacity: 0;
+}
+.butCssDown{
+    opacity: 0;
+}
+.fRow{
+    opacity: 0;   
+}
+.sRow{
+    opacity: 0;   
+}
+
+.itemActiveNum{
+    background-color:#33D8ED;
+    color:black;
+}
+
+
+.middleLine{height: 300px;width:690px;background-color:#606060}
+.middleLine>.row{margin:0px;height: 300px;}
+.downButs{text-align: center;
+    font-size:18px;
+    padding: 3px;
+    font-family: Roboto;
+    font-weight: bold;
+    background-color: black;
+    color: white;
+    border: 5px solid #696969;    
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;}
+.downLineButtons{height:40px;}
+.sDivDownPanel{
+    padding: 17px 14px !important;
+}
+.arrowDiv{
+    background-image: url(/img/arrUp.png);
+    width: 36px;
+    height: 21px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding: 21px;
+}
+.emptyBut{
+text-align: center;
+    padding: 3px;
+    font-family: Roboto;
+    font-weight: bold;
+    background-color: black;
+    color: white;
+    border: 5px solid #696969;    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+.downButs:hover{
+    background-color: #33D8ED;
+    color:black;
+}
+.upItemRightPanel{
+    width: 100%;
+    height: 98px;    
+    border: 3px solid #606060;
+}
+
+.wrapFour{
+    width: 525px;
+    height:32px;
+    overflow: hidden;
+    background-color: black;
+    white-space:nowrap;
+}
+.upItemRightPanel>.row{margin:-1px;}
+.memoryItem {
+    border: 2px solid #606060;
+    height: 32px;
+    padding: 0px;
+    margin: 0px;
+}
+.groupWarpItem{
+    padding-top:5px;
+}
+.activeItemGroup{
+    border:2px solid #33D8ED !important;
+}
+.activeItemGroup>div{
+    border-color:#33D8ED;
+}
+.wrapFour::-webkit-scrollbar{
+    width: 0px;
+}
+.someNumbers, .nameItemRightPanel{    
+    width: 100%;
+    height: 33px;
+    border: 4px solid #606060;
+}
+.nameItem{
+    border-left:0px;
+}
+.nameItemRightPanel{
+    color: white;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+}
+.downNumbersRightPanel>.row{
+    margin:0px;
+    height: 48px;
+}
+.downNumbersRightPanel>.row>div{
+    padding:0px;
+    text-align: center;
+    padding-left: 6px;
+}
+.itemActiveNumberNow{
+    background-color: black;
+    color: #33d8ed;
+}
+.downNumbersRightPanel.activeMMNum{
+    font-size: 28px !important;
+}
+
+#rightPanelBT1, #rightPanelBT2{
+    float: right;
+}
+
+#rightPanelBT1.activeHold{
+    background-image: url('/img/3DA.svg') !important;
+}
+#rightPanelBT2.activeHold{
+    background-image: url('/img/settingA.svg') !important;
+}
+.numSep{
+    display: none;
+    padding-left: 0px !important;
+    margin-left: -7px;
+    margin-right: 7px;
+    width: 0px !important;
+}
+.numSep.activeMMSep{
+    display: block;
+    margin-left: 3px !important;
+    margin-right: 1px !important;
+}
+.upNumbersRightPanel{
+    color: grey;
+    text-align: center;
+    font-weight: 600;
+    font-size: 23px;
+    padding: 0px;
+    height: 36px;
+}
+.downNumbersRightPanel{
+    color: white;
+    font-size: 40px;
+    text-align: center;
+    font-weight: 700;
+    letter-spacing: 6px;
+    padding: 0px;
+    line-height: 42px;
+    height: 48px;
+}
+.downItemRightPanel>.row{margin:0px;}
+.downItemRightPanel{border-top: 5px solid #606060;}
+.buttonsFour{
+   /* width:135px;
+    float: left;
+    display: inline;*/
+    display: inline-block;
+    vertical-align: top;
+    width: 123px;
+    height:33px;
+}
+.nameTitle{
+    text-align: left;
+    padding: 3px;
+    padding-left: 7px;
+    font-weight: 600;
+}
+.rightArTxt{
+    color: #33d8ed;
+    font-size: 16px;
+}
+.wrapThree{
+    position: absolute;
+    width: 165px;
+    height: 33px;
+    right: 300px;
+    background-color: black;
+    border-bottom: 1px solid #606060;
+}
+.butRightSide{
+    width: 54px;
+    float: left;
+    padding: 5px;
+    text-align: center;
+    border-left: 2px solid grey;
+}
+.upLineButtons>.row>.row{margin:0px;}
+.leftItemButRightSide{
+    background-image: url(/img/rightArr.png);
+    height: 31px;
+    padding: 15px;
+    background-size: 10px;
+    background-position: center;
+    width: 55px;
+    background-repeat: no-repeat;
+    background-color: black;
+    margin-top: 0px;
+    border-top: 2px solid #606060;
+    border-bottom: 2px solid #606060;
+
+}
+.holdOff{
+    background-color:black !important;
+    color:#696969 !important;
+}
+.centerItemButRightSide{background-image: url(/img/3DNA.svg);
+    height: 31px;
+    padding: 15px;
+    background-size: 30px;
+    background-position: center;
+    width: 55px;
+    background-repeat: no-repeat;
+    border: 2px solid #606060;
+    background-color: black;}
+.rightItemButRightSide{background-image: url(/img/settingNA.svg);
+    height: 31px;
+    padding: 15px;
+    background-size: 30px;
+    background-position: center;
+    width: 55px;
+    background-repeat: no-repeat;
+    border: 2px solid #606060;
+    background-color: black;}
+
+.outside {
+    width: 528px;
+    height: 100%;
+    padding-right: 0px;
+    overflow-x: hidden;
+    overflow-y: scroll; 
+}
+ 
+.inside {
+    width: 100%;
+    margin: 0 0px;
+    padding-right: 17px;
+
+}
+
+.wrapFourIn{
+    overflow-x: scroll;
+    background-color:black;
+}
+
+.panelNumbersRightPanel{border: 4px solid #606060;
+    height: 90px;}
+
+.rightButtonRightPanel{    
+
+    text-align: center;
+    color: white;
+    background-color: green;
+
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 37px;
+    height: 41px;
+    border: 0px;
+    background-color: #63D07B;
+}
+
+.lineTxt {
+    pointer-events: none;
+    border: 2px solid #696969;
+  }
+
+.stopClick{
+    pointer-events: none;
+}
+
+.downRightPanelBut{
+    border: 4px solid #606060;
+}
+
+#center{display:none;}
